@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="style.css"> 
+    
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="img/logo.png" class="logo" >
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Contact</a></li>
+                
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p><span>DevOps Engineer</span></p>
+            <h1>Hi, I'm <span>Asadul Haque</span><br>from Berlin, Germany</h1>
+        </div>
+    </div>
+</div>
+<!-- ----------about---------- -->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="img/profilbild_asadul.jpg" alt="profilbild">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>I'm a DevOps engineer who is responsible for the smooth 
+                    operation of a company's IT infrastructure. I work with 
+                    developers and Engineers to deploy and manage code changes, and with 
+                    operations staff to ensure that systems are up and running
+                    smoothly. As the world of business becomes increasingly reliant on 
+                    technology, the role of a DevOps engineer is becoming more 
+                    and more important.<br> 
+                    To be successful in this role, a DevOps engineer 
+                    must have a deep understanding of both development and 
+                    operations processes, as well as a strong technical background.                      
+                </p>
+
+                <div class="tab-titles">
+                <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                <p class="tab-links"onclick="opentab('experience')">Experience</p>
+                <p class="tab-links"onclick="opentab('education')">Education</p>    
+                </div>
+                <div class="tab-contents active-tab" id="skills"> 
+                    <ul>
+                        <li><span>Cloud Computing</span><br>Amazon Web Services (AWS)</li>
+                        <li><span>Software Development</span><br>Designing Web Application and Interfaces</li>
+                        <li><span>Front-end and Back-end Development</span><br>Client-side and Server-side Setup <br>SQL Server, MySQL, NoSQL, PostgreSQL, DynamoDB, MongoDB, Oracle</li>                  
+                    </ul> 
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>Chief Executive Officer</span><br>DipMax Export GmbH, Germany</li>
+                        <li><span>Software Developer</span><br>Berlinux Solutions GmbH, Germany</li>
+                        <li><span>Engineer Research & Development</span><br>Diehl Aviation, Germany</li>
+                        <li><span>Research Scientist</span><br>University of Ulm, Germany</li>                  
+                    </ul> 
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>Master of Science (Tech.) in Computer Science</span><br>Tampere University of Technology, Finland<br>
+                            Faculty of Computer Science and Electrical Engineering</li>
+                        <li><span>Bachelor of Science in Computer Science</span><br>Moscow Power Engineering Institute (TU), Russia</li>  
+                    </ul> 
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for (tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link"); 
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+
+</body>
+</html>
